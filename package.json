@@ -1,0 +1,10 @@
+{
+  "name": "html5-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "nuesslerm",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production"
+  }
+}
