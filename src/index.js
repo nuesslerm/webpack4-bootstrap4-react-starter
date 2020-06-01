@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Form from './components/form.component.jsx';
+import App from './App.js';
 
 const wrapper = document.getElementById('container');
-wrapper ? ReactDOM.render(<Form />, wrapper) : false;
+wrapper ? ReactDOM.render(<App />, wrapper) : false;

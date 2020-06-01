@@ -8,13 +8,18 @@ class Form extends React.Component {
       value: '',
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  // handleChange(event) {
+  //   const { value } = event.target;
+  //   this.setState({ value });
+  // }
+
+  handleChange = (event) => {
     const { value } = event.target;
     this.setState({ value });
-  }
+  };
 
   render() {
     return (
@@ -22,6 +27,7 @@ class Form extends React.Component {
         <input
           type="text"
           value={this.state.value}
+          placeholder={Form}
           onChange={this.handleChange}
         ></input>
       </form>
