@@ -6,10 +6,30 @@
 
 /* CSS: cascading stylesheet */
 
+/* https://css-tricks.com/almanac/ */
+
+body {
+  background-image: url(../assets/something1.jpg);
+  background-size: cover;
+}
+
 h2 {
-  color: red;
+  color: #aa5585;
+  text-align: center;
+  border: 5px dashed rgb(205, 136, 175);
+  cursor: grab;
 }
 
 p {
-  color: green;
+  color: pink;
+}
+
+p {
+  color: black;
+}
+
+li {
+  list-style: none;
+  /* display: block; */
+  display: inline-block;
 }
