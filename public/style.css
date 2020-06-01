@@ -1,0 +1,15 @@
+/* stndard CSS format:
+  html-selector {
+    property: value;
+  } 
+*/
+
+/* CSS: cascading stylesheet */
+
+h2 {
+  color: red;
+}
+
+p {
+  color: green;
+}
