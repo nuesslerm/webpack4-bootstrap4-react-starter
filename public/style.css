@@ -4,19 +4,38 @@
   } 
 */
 
-/* CSS: cascading stylesheet */
+/* CSS: cascading stylesheet;
+  styles from top to bottom;
+  overwrites rules that were defined further up with ones that were
+  defined further down if they target the same selector
+*/
 
 /* https://css-tricks.com/almanac/ */
+
+* {
+  text-align: right;
+}
 
 body {
   background-image: url(../assets/something1.jpg);
   background-size: cover;
 }
 
-h2 {
+h2,
+p {
   color: #aa5585;
   text-align: center;
-  border: 5px dashed rgb(205, 136, 175);
+  border: 3px dashed rgba(205, 136, 175, 0.3);
+  background-color: rgba(205, 136, 175, 0.05);
+  cursor: grab;
+}
+
+/* only target p tags inside of h2 tags v */
+h2 p {
+  color: #aa5585;
+  text-align: center;
+  border: 3px dashed rgba(205, 136, 175, 0.3);
+  background-color: rgba(205, 136, 175, 0.05);
   cursor: grab;
 }
 
@@ -29,7 +48,40 @@ p {
 }
 
 li {
+  text-align: left;
+}
+
+ul {
   list-style: none;
-  /* display: block; */
-  display: inline-block;
+  display: inline;
+
+  /* margin-left: 10px; */
+  /* display: inline-block; */
+}
+
+ul li::before {
+  /* The ::before and ::after pseudo-elements in CSS allows you to 
+  insert content onto a page without it needing to be in the HTML.  */
+  content: '🌸';
+  display: inline;
+  top: 0.1rem;
+  margin-right: 0.2rem;
+  margin-left: 7px;
+}
+
+.active {
+  text-align: start;
+}
+
+.webtext {
+  border: 1px dashed rgba(68, 0, 38, 0.6);
+  background-color: rgba(205, 136, 175, 0.5);
+}
+
+#div1 {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+#div2 {
+  background: rgba(255, 255, 255, 0.6);
 }
