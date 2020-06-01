@@ -8,7 +8,55 @@
   </head>
   <body>
     <!-- registration form in HTML5 -->
-    <form></form>
+    <!-- <form method="GET" action="action.php">  action.php is something outdated-->
+    <!-- <form method="POST"> <- attaches the payload to the request body, not in the header-->
+
+    <!-- div allows us to devide up the HTML page content and apply CSS to it -->
+    <div>
+      <form method="GET">
+        <!-- span is an inline element; you don't need to add it to an entire block, 
+        you can just add it to a specific line to style it with CSS -->
+        <span>First Name:</span> <input type="text" name="firstname" /> <br />
+        Last Name: <input type="text" name="lastname" /> <br />
+        Email: <input type="email" required name="email" /> <br />
+        Password: <input type="password" min="5" name="password" /> <br />
+        Birthday: <input type="date" name="birthday" /> <br />
+        Gender: <br />
+        <!-- if name is the same in all the inputs, 
+        then value needs to be the distinguishing feature -->
+        <input type="radio" name="gender" value="male" />Male<br />
+        <input type="radio" name="gender" value="female" />Female<br />
+        <input type="radio" name="gender" value="other" />Other<br />
+        Pets: <br />
+        <input type="checkbox" name="cat" /> Cat<br />
+        <input type="checkbox" name="dog" /> Dog<br />
+        Cars: <br />
+        <select name="cars" size="1">
+          <option value="volvo">Volvo</option>
+          <option value="audi">Audi</option>
+          <option value="bmw">BMW</option>
+          <option value="renault">Renault</option>
+          <option value="vw">VW</option>
+        </select>
+        <br />
+        <input type="submit" value="Register!" />
+        <input type="reset" />
+      </form>
+    </div>
+
+    <p>
+      ? firstname=fake &lastname=man &email=fake%40gmail.com &password=123
+      &birthday=2020-06-10 &gender=on &cat=on&dog=on
+    </p>
+    <p>
+      ? firstname=lölkjasd &lastname=sdfkjle &email=aeg%40dagd.fosmc
+      &password=133 &birthday=2020-06-24 &gender=other &cat=on &cars=vw
+    </p>
+    <p>
+      ? firstname=aegae &lastname=egagd &email=sasd%40dfasdlf.com
+      &password=a12324 &birthday=2020-06-17 &gender=male &cat=on &dog=on
+      &cars=bmw
+    </p>
 
     <p>
       <strong>
@@ -93,6 +141,8 @@
     <a href="https://www.w3schools.com/">
       what
     </a>
+
+    <!-- This is a comment -->
 
     <!-- <div id="root"></div> -->
   </body>
