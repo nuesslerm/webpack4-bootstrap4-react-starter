@@ -21,14 +21,14 @@ body {
   background-size: cover;
 }
 
-/* h2,
+h2,
 p {
   color: #aa5585;
   text-align: center;
   border: 3px dashed rgba(205, 136, 175, 0.3);
   background-color: rgba(205, 136, 175, 0.05);
   cursor: grab;
-} */
+}
 
 /* only target p elements inside of h2 elements
 <h2>
@@ -70,21 +70,32 @@ p {
   cursor: grab;
 } */
 
-h2 + p:hover {
+/* h2 + p:hover {
   color: #aa5585;
   text-align: center;
   border: 3px dashed rgba(205, 136, 175, 0.3);
   background-color: rgba(205, 136, 175, 0.05);
   cursor: grab;
-}
+} */
 
 /* important overwrites any of the cascading style-sheet rules */
-p {
+/* p {
   color: pink !important;
-}
+} */
 
 p {
-  color: black;
+  color: rgba(205, 136, 175, 0.9);
+  text-decoration: underline;
+  text-transform: capitalize;
+  line-height: 30px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 150%;
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  float: left;
 }
 
 li {
