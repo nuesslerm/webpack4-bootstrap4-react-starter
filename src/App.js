@@ -14,6 +14,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <hr />
+        <p>This is part of ReactDOM:</p>
         <Form />
       </div>
     );
