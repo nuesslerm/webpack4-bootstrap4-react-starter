@@ -9,7 +9,9 @@ h2 {
   height: 55px;
   /* content -> padding -> border -> margin */
   /* border of div container */
-  border: 5px solid red;
+  /* border: 5px solid red; -> solid red border with 5px unit-width */
+  border: solid red;
+  border-width: 10px 5px 5px 20px;
   /* padding: 20px; -> equidistant padding */
   /* padding: 5px 20px 35px 50px; -> top right bottom left */
   padding: 5px 20px 5px 20px;
@@ -18,6 +20,7 @@ h2 {
   /* margin: 0px 20px 0px 20px; -> top right bottom left */
   /* margin: 0px 20px; -> top/bottom left/right */
   margin: 0px 20px;
+  /* margin-left: 40px; */
 }
 
 p {

@@ -1,7 +1,10 @@
 # CSS Cheat Sheet
 
 ## Fun CSS Game:
-https://flukeout.github.io/
+* https://flukeout.github.io/
+* https://www.w3schools.com/css/css_quiz.asp
+* https://www.w3schools.com/css/exercise.asp
+* https://zero-to-mastery.github.io/resources/
 
 ## Reference:
 * https://www.w3schools.com/cssref/css_selectors.asp
@@ -16,7 +19,7 @@ Cascading Style Sheets at the most basic level, indicate that the order of CSS r
 - #id
 - `*`
 - element
-- element, element
+- element, element -> groups selectors, ie. each listed selector will be subject to the same css styles
 - element element
 - element > element
 - element + element
