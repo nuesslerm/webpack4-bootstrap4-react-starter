@@ -19,3 +19,20 @@ h2 {
   /* margin: 0px 20px; -> top/bottom left/right */
   margin: 0px 20px;
 }
+
+p {
+  font-size: 10px;
+}
+
+span {
+  /* em means x-times the value of the container element, 
+  here: the p tag with font-size of 20px */
+  font-size: 2em;
+}
+
+.rem-demo {
+  /* rem means x-times the value of the root element, 
+  i.e. the default value of the <html> container element, 
+  e.g. if default font-size is 12px, then 2rem = 24px*/
+  font-size: 2rem;
+}
