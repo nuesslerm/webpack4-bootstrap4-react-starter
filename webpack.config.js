@@ -37,12 +37,19 @@ module.exports = {
             // It gets all transformed CSS and extracts it into separate
             // single bundled file
             loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   esModule: true,
-            // },
           },
-          // { loader: 'style-loader' },
           { loader: 'css-loader' },
+          {
+            // Then we apply postCSS fixes like autoprefixer and minifying
+            loader: 'postcss-loader',
+          },
+          {
+            // First we transform SASS to standard CSS
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+            },
+          },
         ],
       },
     ],
