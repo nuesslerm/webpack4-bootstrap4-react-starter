@@ -1,3 +1,21 @@
 h2 {
   color: blue;
 }
+
+.boxmodel {
+  display: inline-block;
+  /* change content width and height of div container */
+  width: 33px;
+  height: 55px;
+  /* content -> padding -> border -> margin */
+  /* border of div container */
+  border: 5px solid red;
+  /* padding: 20px; -> equidistant padding */
+  /* padding: 5px 20px 35px 50px; -> top right bottom left */
+  padding: 5px 20px 5px 20px;
+  /* margin: allows us to create space outside of the border */
+  /* margin: 20px; -> equidistant margin **/
+  /* margin: 0px 20px 0px 20px; -> top right bottom left */
+  /* margin: 0px 20px; -> top/bottom left/right */
+  margin: 0px 20px;
+}

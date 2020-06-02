@@ -87,7 +87,7 @@ p {
   color: rgba(205, 136, 175, 0.9);
   text-decoration: underline;
   text-transform: capitalize;
-  line-height: 30px;
+  line-height: 5px;
   font-style: italic;
   font-weight: bold;
   font-size: 150%;
@@ -95,7 +95,12 @@ p {
 }
 
 img {
-  float: left;
+  float: right;
+}
+
+footer {
+  clear: both;
+  text-align: center;
 }
 
 li {
