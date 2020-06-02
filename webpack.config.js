@@ -1,3 +1,10 @@
+// webpack setup tutorial for js|jsx, html:
+// https://www.valentinog.com/blog/babel/
+
+// webpack setup tutorial for s|css:
+// https://github.com/pixelgoo/simple_webpack_boilerplate,
+// https://dev.to/pixelgoo/how-to-configure-webpack-from-scratch-for-a-basic-website-46a5
+
 const path = require('path');
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
