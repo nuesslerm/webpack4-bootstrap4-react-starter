@@ -109,3 +109,7 @@ p {
   ```
 
   `style.css > style2.css`
+
+  ## Critical Render Path
+  - CSS are render-blocking files, also font files, ie. files that need to be fetched first, before website can be rendered and displayed
+  - minify CSS
