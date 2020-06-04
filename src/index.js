@@ -7,7 +7,8 @@ import App from './App.js';
 // * we don't need to import ./index.css into index.js, because we already imported
 // * the css file into index.html via:
 // * <link rel="stylesheet" type="text/css" href="/src/index.css" />
-import 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const wrapper = document.getElementById('root');
 wrapper ? ReactDOM.render(<App />, wrapper) : false;

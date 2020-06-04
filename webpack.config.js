@@ -85,6 +85,7 @@ module.exports = {
       filename: '[name].css',
       // chunkFilename: '[id].css',
     }),
+    // TODO find out why I need to load these exports via exports-loader and webpack.ProvidePlugin
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

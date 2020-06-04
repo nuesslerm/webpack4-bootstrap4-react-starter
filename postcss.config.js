@@ -1,5 +1,5 @@
 // It is handy to not have those transformations while we are developing
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
   module.exports = {
     /**
     plugins: [
