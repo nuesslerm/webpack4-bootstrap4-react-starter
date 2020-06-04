@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 
 import App from './App.js';
 
-// ? import './index.css';
-// * we don't need to import ./index.css into index.js, because we already imported
+// ? import './main.css';
+// * we don't need to import ./main.css into index.js, because we already imported
 // * the css file into index.html via:
-// * <link rel="stylesheet" type="text/css" href="/src/index.css" />
+// * <link rel="stylesheet" type="text/css" href="/src/main.css" />
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap';
