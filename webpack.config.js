@@ -8,6 +8,7 @@
 // boostrap 4 and font-awespme setup tutorial:
 // for webpack 4: https://medium.com/@estherfalayi/webpack-4-nicknamed-legato-is-out-and-the-community-is-still-on-the-hots-for-it-i-am-too-e9bee3d2e4a
 // // webpack 3: https://medium.com/@estherfalayi/setting-up-webpack-for-bootstrap-4-and-font-awesome-eb276e04aaeb
+// how to setup webpack quick-start: https://getbootstrap.com/docs/4.5/getting-started/webpack/
 
 const webpack = require('webpack');
 const path = require('path');
