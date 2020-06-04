@@ -10,7 +10,7 @@
 // // webpack 3: https://medium.com/@estherfalayi/setting-up-webpack-for-bootstrap-4-and-font-awesome-eb276e04aaeb
 // how to setup webpack quick-start: https://getbootstrap.com/docs/4.5/getting-started/webpack/
 
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -65,10 +65,12 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /bootstrap\/dist\/js\/umd\//,
-        use: 'imports-loader?jQuery=jquery',
-      },
+      /* #region FIXME unnecessary bootstrap rule */
+      // {
+      //   test: /bootstrap\/dist\/js\/umd\//,
+      //   use: 'imports-loader?jQuery=jquery',
+      // },
+      /* #endregion */
     ],
   },
 
@@ -85,22 +87,23 @@ module.exports = {
       filename: '[name].css',
       // chunkFilename: '[id].css',
     }),
-    // TODO find out why I need to load these exports via exports-loader and webpack.ProvidePlugin
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
-      Button: 'exports-loader?Button!bootstrap/js/dist/button',
-      Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
-      Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
-      Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
-      Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
-      Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
-      Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
-      Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
-      Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
-      Util: 'exports-loader?Util!bootstrap/js/dist/util',
-    }),
+    /* #region TODO find out why I need to load these exports via exports-loader and webpack.ProvidePlugin */
+    // new webpack.ProvidePlugin({
+    //   $: 'jquery',
+    //   jQuery: 'jquery',
+    //   'window.jQuery': 'jquery',
+    //   Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
+    //   Button: 'exports-loader?Button!bootstrap/js/dist/button',
+    //   Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
+    //   Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
+    //   Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
+    //   Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
+    //   Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
+    //   Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
+    //   Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
+    //   Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
+    //   Util: 'exports-loader?Util!bootstrap/js/dist/util',
+    // }),
+    /* #endregion */
   ],
 };
