@@ -16,7 +16,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: ['font-awesome/scss/font-awesome.scss', './src/index.js'],
+  entry: './src/index.js',
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -65,23 +65,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: 'url-loader?limit=10000',
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          'file-loader?name=images/[name].[ext]',
-          'image-webpack-loader?bypassOnDebug',
-        ],
-      },
-      {
         test: /bootstrap\/dist\/js\/umd\//,
         use: 'imports-loader?jQuery=jquery',
-      },
-      {
-        test: /font-awesome\.config\.js/,
-        use: [{ loader: 'style-loader' }, { loader: 'font-awesome-loader' }],
       },
     ],
   },
