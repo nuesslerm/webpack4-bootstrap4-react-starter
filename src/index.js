@@ -9,6 +9,7 @@ import App from './App.js';
 // * <link rel="stylesheet" type="text/css" href="/src/index.css" />
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap';
 
 const wrapper = document.getElementById('root');
 wrapper ? ReactDOM.render(<App />, wrapper) : false;
