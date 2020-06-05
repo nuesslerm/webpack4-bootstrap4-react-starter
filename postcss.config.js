@@ -8,9 +8,8 @@ if (process.env.NODE_ENV !== 'test') {
       // More postCSS modules here if needed
     ],
     **/
-    plugins: function () {
+    plugins:
       // post css plugins, can be exported to postcss.config.js
-      return [require('cssnano'), require('precss'), require('autoprefixer')];
-    },
+      [require('cssnano'), require('precss'), require('autoprefixer')],
   };
 }
