@@ -59,9 +59,9 @@ module.exports = {
           {
             // First we transform SASS to standard CSS
             loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-            },
+            // options: {
+            //   implementation: require('sass'),
+            // },
           },
         ],
       },
@@ -87,6 +87,11 @@ module.exports = {
       filename: '[name].css',
       // chunkFilename: '[id].css',
     }),
+    // new webpack.ProvidePlugin({
+    //   $: 'jquery',
+    //   jQuery: 'jquery',
+    //   'window.jQuery': 'jquery',
+    // }),
     /* #region TODO find out why I need to load these exports via exports-loader and webpack.ProvidePlugin */
     // new webpack.ProvidePlugin({
     //   $: 'jquery',
