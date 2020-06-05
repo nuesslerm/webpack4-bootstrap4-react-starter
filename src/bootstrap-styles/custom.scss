@@ -1,3 +1,13 @@
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+* put your bootstrap customisations here.
+* on top of the bootstrap imports at the bottom
+* in scss files the styles aren't cascading, 
+* meaning that variable definitions at the bottom 
+* will overwrite those defined at the top
+**/
+
 // Your variable overrides
 // $body-bg: #000;
 // $body-color: #111;
@@ -7,5 +17,25 @@ $theme-colors: (
   'danger': orange,
 );
 
+////////////////////////////////////////////////////////////////////////////////
+
 // Bootstrap and its default variables
+
+// Custom.scss
+// Option A: Include all of Bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// Required
+// @import 'node_modules/bootstrap/scss/functions';
+// @import 'node_modules/bootstrap/scss/variables';
+// @import 'node_modules/bootstrap/scss/mixins';
+
+// Optional
+// @import 'node_modules/bootstrap/scss/reboot';
+// @import 'node_modules/bootstrap/scss/type';
+// @import 'node_modules/bootstrap/scss/images';
+// @import 'node_modules/bootstrap/scss/code';
+// @import 'node_modules/bootstrap/scss/grid';
