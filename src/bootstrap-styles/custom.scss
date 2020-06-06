@@ -13,8 +13,8 @@
 // $body-color: #111;
 
 $theme-colors: (
-  'primary': purple,
-  'danger': orange,
+  // 'primary': purple,
+    'danger': purple
 );
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -23,15 +23,16 @@ $theme-colors: (
 
 // Custom.scss
 // Option A: Include all of Bootstrap
-@import 'node_modules/bootstrap/scss/bootstrap';
+// @import 'node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 
 // Custom.scss
 // Option B: Include parts of Bootstrap
 
 // Required
-// @import 'node_modules/bootstrap/scss/functions';
-// @import 'node_modules/bootstrap/scss/variables';
-// @import 'node_modules/bootstrap/scss/mixins';
+// @import '~bootstrap/scss/functions';
+// @import '~bootstrap/scss/variables';
+// @import '~bootstrap/scss/mixins';
 
 // Optional
 // @import 'node_modules/bootstrap/scss/reboot';
