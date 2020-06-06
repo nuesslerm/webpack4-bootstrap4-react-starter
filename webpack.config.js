@@ -35,7 +35,7 @@ module.exports = {
     inline: true,
   },
 
-  // there is a html plugin that will automatically create html from template
+  // this is an html plugin that will automatically create an index.html from template
   // and insert your JS bundle there.
   plugins: [
     new HtmlWebPackPlugin({
@@ -49,29 +49,6 @@ module.exports = {
       // chunkFilename: '[id].css',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    // new webpack.ProvidePlugin({
-    //   $: 'jquery',
-    //   jQuery: 'jquery',
-    //   'window.jQuery': 'jquery',
-    // }),
-    /* #region TODO find out why I need to load these exports via exports-loader and webpack.ProvidePlugin */
-    // new webpack.ProvidePlugin({
-    //   $: 'jquery',
-    //   jQuery: 'jquery',
-    //   'window.jQuery': 'jquery',
-    //   Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
-    //   Button: 'exports-loader?Button!bootstrap/js/dist/button',
-    //   Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
-    //   Collapse: 'exports-loader?Collapse!bootstrap/js/dist/collapse',
-    //   Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown',
-    //   Modal: 'exports-loader?Modal!bootstrap/js/dist/modal',
-    //   Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
-    //   Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
-    //   Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
-    //   Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
-    //   Util: 'exports-loader?Util!bootstrap/js/dist/util',
-    // }),
-    /* #endregion */
   ],
 
   module: {
@@ -115,12 +92,6 @@ module.exports = {
           },
         ],
       },
-      /* #region FIXME unnecessary bootstrap rule */
-      // {
-      //   test: /bootstrap\/dist\/js\/umd\//,
-      //   use: 'imports-loader?jQuery=jquery',
-      // },
-      /* #endregion */
     ],
   },
 };
