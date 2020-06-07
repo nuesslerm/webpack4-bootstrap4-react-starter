@@ -28,7 +28,7 @@ module.exports = {
   },
 
   devServer: {
-    // contentBase: path.join(__dirname, 'src'),
+    contentBase: path.join(__dirname, 'src'),
     watchContentBase: true,
     hot: true,
     open: true,
@@ -94,24 +94,17 @@ module.exports = {
       },
       {
         test: /\.jpg$/,
-        // use: [
-        //   {
-        //     // loader: 'file-loader?name=/assets/[name].[ext]',
-        //     loader: 'file-loader',
-        //     // options: {
-        //     //   // outputPath: './images',
-        //     //   name: 'assets/[name].[ext]',
-        //     //   publicPath: '/',
-        //     // },
-        //   },
-        // ],
         use: [
           {
-            loader: 'file-loader',
-            options: {
-              outputPath: './images',
-              name: '[name].[ext]',
-            },
+            // make sure that the asset storage folder is called "./src/images"
+            loader: 'file-loader?name=/images/[name].[ext]',
+            // loader: 'file-loader',
+            // options: {
+            //   name: 'images/[name].[ext]',
+            //   // outputPath: 'images',
+            //   // name: '[name].[ext]',
+            //   publicPath: '/',
+            // },
           },
         ],
       },
