@@ -28,7 +28,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
+    // contentBase: path.join(__dirname, 'src'),
     watchContentBase: true,
     hot: true,
     open: true,
@@ -89,6 +89,29 @@ module.exports = {
             // options: {
             //   implementation: require('sass'),
             // },
+          },
+        ],
+      },
+      {
+        test: /\.jpg$/,
+        // use: [
+        //   {
+        //     // loader: 'file-loader?name=/assets/[name].[ext]',
+        //     loader: 'file-loader',
+        //     // options: {
+        //     //   // outputPath: './images',
+        //     //   name: 'assets/[name].[ext]',
+        //     //   publicPath: '/',
+        //     // },
+        //   },
+        // ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: './images',
+              name: '[name].[ext]',
+            },
           },
         ],
       },
