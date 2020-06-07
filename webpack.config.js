@@ -97,7 +97,14 @@ module.exports = {
         use: [
           {
             // make sure that the asset storage folder is called "./src/images"
-            loader: 'file-loader?name=/images/[name].[ext]',
+            //
+            // name needs to be the same path as referenced in the style file, ie.
+            // if background: url('./images/header.jpg')
+            // then ?name=./images/[name].[ext]'
+            //
+            // if background: url('images/header.jpg')
+            // then ?name=images/[name].[ext]'
+            loader: 'file-loader?name=./images/[name].[ext]',
             // loader: 'file-loader',
             // options: {
             //   name: 'images/[name].[ext]',
