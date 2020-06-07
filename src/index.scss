@@ -4,7 +4,7 @@ html {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   /* https://css-tricks.com/perfect-full-page-background-image/ */
-  background: url(/assets/header.jpg) no-repeat center center fixed;
+  background: url('/assets/header.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,23 +26,35 @@ hr {
   max-width: 65px;
 }
 
-.btn {
+button.btn {
   font-weight: 700;
   border-radius: 300px;
   text-transform: uppercase;
-}
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
 
-.btn-primary {
-  background-color: #f05f44;
-  border-color: #f05f44;
-}
+  &.primary {
+    background-color: #f05f44;
+    border-color: #f05f44;
+    &:hover {
+      // TODO try to test different approaches like putting the button into its own row.
+      background-color: #ee4b08;
+      border-color: #ee4b08;
+      text-decoration: none;
+      color: white;
+      // border-width: 4px; <- can use transform instead of border-width change
+      // the 1.1 is the scale factor so the button gets 10% larger.
+      // scaling the button overlaps adjacent elements instead of pushing them up.
+      transform: scale(1.1);
+    }
+    &:active {
+      background-color: #ee4b08;
+      border-color: #ee4b08;
+    }
+  }
 
-.btn-primary:hover {
-  background-color: #ee4b08;
-  border-color: #ee4b08;
-  border-width: 4px;
-}
-
-.btn-xl {
-  padding: 1rem 2rem;
+  &.xl {
+    padding: 1rem 2rem;
+  }
 }
