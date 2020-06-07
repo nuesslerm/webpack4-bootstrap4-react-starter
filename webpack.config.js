@@ -93,7 +93,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.jpg$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
           {
             // make sure that the asset storage folder is called "./src/images"
